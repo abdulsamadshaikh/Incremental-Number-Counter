@@ -1,0 +1,157 @@
+/*  
+Project Name: Incremental Number Counter
+Description: Beautiful Incremental Number Counter with rotating icons effect, using Javascript. Give me a thumbs-up, If you like it. Enjoy!
+Author: Abdul Samad
+Author URI: https://getabdulsamad.com/
+Tags: Mobile-friendly, All-Devices-Supported. 
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f2f4f8;
+  color: #333;
+  -webkit-transition: color 0.6s ease-in-out;
+  -moz-transition: color 0.6s ease-in-out;
+  transition: color 0.6s ease-in-out;
+  margin: 40px 0;
+  height: 100vh;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+}
+
+.container {
+  width: 1280px;
+  max-width: 100%;
+  padding: 20px;
+}
+
+.container h1 {
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 34px;
+  text-align: center;
+  margin-bottom: 60px;
+  -webkit-text-shadow: 1px 1px rgba(0, 0, 0, 0.24);
+  -moz-text-shadow: 1px 1px rgba(0, 0, 0, 0.24);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.24);
+}
+
+.counters-container {
+  text-align: center;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-gap: 40px;
+  -moz-gap: 40px;
+  gap: 40px;
+}
+
+.counter-box {
+  background-color: #f7f7f7;
+  padding: 10px;
+  border-radius: 35px;
+  width: 250px;
+  height: 250px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.counter-box i {
+  font-size: 40px;
+  background-color: #f2f4f8;
+  padding: 10px;
+  border-radius: 100%;
+  width: 75px;
+  height: 75px;
+  line-height: 55px;
+}
+
+.loading {
+  -webkit-animation: rotation 2s infinite linear;
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+.counter-box .count {
+  font-family: 'Oswald', sans-serif;
+  font-size: 42px;
+}
+
+.counter-box .text {
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .counters-container {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .counter-box i {
+    font-size: 40px;
+  }
+  .counter-box .count {
+    font-size: 32px;
+  }
+  .counter-box .text {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .container h1 {
+    font-size: 28px;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  body {
+    height: inherit;
+  }
+}
